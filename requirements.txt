@@ -3,3 +3,5 @@ python-dotenv
 ipywidgets
 
 # google-genai "==" 表示指定版本, 若沒寫就是最新版本
+
+Pillow
