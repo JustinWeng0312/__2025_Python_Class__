@@ -1,0 +1,15 @@
+import gradio as gr
+
+with gr.Blocks() as demo:
+    name_textbox = gr.Textbox(label="姓名", placeholder="請輸入姓名")
+    output_textbox = gr.Textbox(label="輸出", placeholder="輸出結果會顯示在這裡")
+    greet_button = gr.Button("打招呼")
+    
+    @greet_button.click( 
+                       inputs=[name_textbox], 
+                       outputs=[output_textbox]
+    ) # 使用裝飾器語法來定義按鈕點擊事件
+    def greet(name):
+        return "你好，" + name + "！歡迎使用 Gradio！"
+
+demo.launch()
